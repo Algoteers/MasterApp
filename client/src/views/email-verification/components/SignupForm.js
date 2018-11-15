@@ -119,9 +119,7 @@ export class SignupForm extends Component {
 
   async handleSubmit (e, NewsletterSignup) {
     e.preventDefault()
-    console.log('NewsletterSignup handleSubmit: ', this.state.email)
     const signupResponse = await NewsletterSignup({ variables: { email: this.state.email } })
-    console.log('NewsletterSignup: ', signupResponse)
     if (signupResponse.data.master_NewsletterSignup === 'SUCCESS') this.setState({ email: '', success: true })
   }
 }

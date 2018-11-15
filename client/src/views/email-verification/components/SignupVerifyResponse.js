@@ -15,7 +15,7 @@ export class SignupVerifyResponse extends React.Component {
     let BannerTitle = ''
     let BannerText = ''
     let displayForm = false
-    console.log('SignupVerifyResponse:', loading, error, data)
+
     if (error) {
       if (error.message === 'GraphQL error: Error: Token Expired. Please resubmit email address.') {
         BannerText = [
@@ -44,7 +44,6 @@ export class SignupVerifyResponse extends React.Component {
       BannerText = ['Processing newsletter sign-up...', <br key='EmailSignupConfirm-br' />, 'Thank you for opting-in to recieve updates about the Advanced Algos project!']
     }
     if (data !== undefined && data !== null) {
-      console.log(data)
       if (data.master_NewsletterSignupVerify === 'SUCCESS') {
         return (
           <React.Fragment>

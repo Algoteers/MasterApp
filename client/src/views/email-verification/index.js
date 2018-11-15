@@ -31,7 +31,7 @@ export const EmailSignupConfirm = ({ tokenParam }) => {
       />
     )
   }
-  console.log(token)
+
   return (
     <Mutation
       mutation={NEWSLETTER_SIGNUP_VERIFY}
